@@ -5,7 +5,7 @@ import Facebook from '../img/facebook.png';
 const Login = () => {
   return (
     <div className="login">
-      <h1 className="loginTitle">log the frig in</h1>
+      <h1 className="loginTitle word1">log the frig in</h1>
       <div className="wrapper">
         <div className="left">
           <div className="loginBtn google">
@@ -21,10 +21,14 @@ const Login = () => {
             Github
           </div>
         </div>
+        <div className="center">
+          <div className="line" />
+          <div className="or">OR</div>
+        </div>
         <div className="right">
           <input type="text" placeholder="username" />
           <input type="text" placeholder="password" />
-          <button className="submit">log INN</button>
+          <button className="submit">log INN &#10084;</button>
         </div>
       </div>
     </div>
