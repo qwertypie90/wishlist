@@ -259,3 +259,8 @@ input {
     text-indent: 0;
   }
 }
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
