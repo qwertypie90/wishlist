@@ -1,17 +1,29 @@
-const Navbar = () => {
+import avi from '../img/avi.jpg';
+import logo from '../img/logo.png';
+import { Link } from 'react-router-dom';
+
+const Navbar = ({ user }) => {
   return (
     <div className="Navbar">
       <div className="logo">
-        <img className="image_logo" src="img/logo.png"></img>
-        <span>w!shl!st </span>
+        <img src={logo} alt="" className="image_logo" />
+        <Link className="link" to="/">
+          <span>w!shl!st </span>
+        </Link>
       </div>
-      <ul className="list">
-        <li className="listItem">
-          <img src="/avi.jpg" alt="" className="avatar" />
-        </li>
-        <li className="listItem">juan doe</li>
-        <li className="listItem">logowt</li>
-      </ul>
+      {user ? (
+        <ul className="list">
+          <li className="listItem">
+            <img src={avi} alt="" className="avatar" />
+          </li>
+          <li className="listItem">juan doe</li>
+          <li className="listItem">logowt</li>
+        </ul>
+      ) : (
+        <Link className="link" to="login">
+          {'log !n'}
+        </Link>
+      )}
     </div>
   );
 };
